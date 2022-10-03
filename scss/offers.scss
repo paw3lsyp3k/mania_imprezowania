@@ -1,0 +1,236 @@
+$main-yellow: #f1c40f;
+$main-white: #f2f2f2;
+$secondary-gray: #e4e4e4;
+
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin center-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper1 {
+  width: 100%;
+  background-color: $main-white;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  nav {
+    width: 100%;
+    background-color: $main-white;
+    display: flex;
+    padding: 1vmax 0;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    border-bottom: 3px solid $secondary-gray;
+    .goBack-section {
+      display: flex;
+      align-items: center;
+      margin-left: 6vmax;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        margin-left: 1vmax;
+      }
+      .goBack-icon {
+        width: 1vmax;
+        height: 1vmax;
+        background-image: url(../assets/icons/arrow-icon.png);
+        @include center-img;
+        transform: rotate(90deg);
+        cursor: pointer;
+        @media screen and (orientation: portrait) {
+          width: 3vmax;
+          height: 3vmax;
+        }
+      }
+      a {
+        margin-left: 1vmax;
+        font-size: 1.4vmax;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+        @media screen and (orientation: portrait) {
+          font-size: 2.5vmax;
+        }
+        &:visited {
+          color: black;
+        }
+      }
+    }
+    h1 {
+      font-weight: 400;
+      font-size: 1.8vmax;
+      cursor: pointer;
+      margin-right: 6vmax;
+      @media screen and (orientation: portrait) {
+        font-size: 2.5vmax;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        margin-right: unset;
+      }
+      br {
+        display: block;
+        content: '';
+        margin-top: -1.5vmax;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+      }
+    }
+  }
+  .wrapper-1-container {
+    height: 75%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10vmax 10vmax 5vmax 8vmax;
+    @media screen and (orientation: portrait) {
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      margin-left: unset;
+      padding: 4vmax 0 4vmax 0;
+    }
+    h2 {
+      font-size: 3.4vmax;
+      font-weight: 300;
+      margin: 1vmax 0 5vmax 0;
+      @media screen and (orientation: portrait) {
+        font-size: 4.5vmax;
+        margin: 3vmax 0 5vmax 0;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        margin: 8vmax 0 5vmax 3vmax;
+      }
+      span {
+        color: $main-yellow;
+      }
+    }
+    .wrapper-1-item {
+      padding: 0.5vmax;
+      margin: 1.5vmax 0;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      h3 {
+        font-size: 1.6vmax;
+        font-weight: 200;
+        position: relative;
+        padding: 0 1vmax;
+        @media screen and (orientation: portrait) {
+          font-size: 3vmax;
+          margin-left: 3vmax;
+        }
+        @media screen and (orientation: portrait) and (max-width: 450px) {
+          width: 70%;
+          margin-left: 4vmax;
+        }
+        &::before {
+          transition: 350ms ease;
+          position: absolute;
+          content: '';
+          width: 110%;
+          height: 100%;
+          top: 0;
+          left: -5%;
+          background-color: $main-yellow;
+          z-index: -1;
+        }
+      }
+      p {
+        margin-left: 3vmax;
+        width: 25vmax;
+        padding: 1.5vmax 3vmax;
+        background-color: $secondary-gray;
+        font-size: 1.3vmax;
+        font-weight: 200;
+        @media screen and (orientation: portrait) {
+          width: 25vmax;
+          font-size: 2.2vmax;
+          margin-left: 7vmax;
+          width: 35vmax;
+        }
+        @media screen and (orientation: portrait) and (max-width: 450px) {
+          margin-left: 5vmax;
+          width: 70%;
+        }
+      }
+      ul {
+        margin-left: 3vmax;
+        width: 25vmax;
+        padding: 1vmax 3vmax;
+        background-color: $secondary-gray;
+        @media screen and (orientation: portrait) {
+          margin-left: 7vmax;
+          width: 35vmax;
+        }
+        @media screen and (orientation: portrait) and (max-width: 450px) {
+          margin-left: 5vmax;
+          width: 70%;
+        }
+        li {
+          margin-top: 0.5vmax;
+          padding: 0.5vmax;
+          h4 {
+            font-size: 1.3vmax;
+            font-weight: 200;
+            @media screen and (orientation: portrait) {
+              font-size: 2.2vmax;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.weedings {
+  background-image: url(../assets/img/poba4.png);
+  @media screen and (orientation: portrait) {
+    background-image: none;
+  }
+}
+
+.kids {
+  background-image: url(../assets/img/poba3.png);
+  @media screen and (orientation: portrait) {
+    background-image: none;
+  }
+}
+
+.partys {
+  background-image: url(../assets/img/poba5.png);
+  @media screen and (orientation: portrait) {
+    background-image: none;
+  }
+}
+
+.others {
+  background-image: url(../assets/img/poba6.png);
+  @media screen and (orientation: portrait) {
+    background-image: none;
+  }
+}

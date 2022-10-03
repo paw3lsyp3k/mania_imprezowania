@@ -1,0 +1,244 @@
+$main-yellow: #f1c40f;
+$main-white: #f2f2f2;
+$secondary-gray: #e4e4e4;
+
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin center-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin holdEfect {
+  &::before {
+    transition: 400ms ease;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: black;
+  }
+  &:hover {
+    transition: 400ms ease;
+    background-color: $main-yellow;
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: $main-white;
+}
+
+.wrapper-1 {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4vmax 0;
+  nav {
+    width: 100%;
+    background-color: $main-white;
+    display: flex;
+    top: 0;
+    padding: 1vmax 0;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 700;
+    border-bottom: 3px solid $secondary-gray;
+    .goBack-section {
+      display: flex;
+      align-items: center;
+      margin-left: 6vmax;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        margin-left: 1vmax;
+      }
+      .goBack-icon {
+        width: 1vmax;
+        height: 1vmax;
+        background-image: url(../assets/icons/arrow-icon.png);
+        @include center-img;
+        transform: rotate(90deg);
+        cursor: pointer;
+        @media screen and (orientation: portrait) {
+          width: 3vmax;
+          height: 3vmax;
+        }
+      }
+      a {
+        margin-left: 1vmax;
+        font-size: 1.4vmax;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+        @media screen and (orientation: portrait) {
+          font-size: 2.5vmax;
+        }
+        &:visited {
+          color: black;
+        }
+      }
+    }
+    h1 {
+      font-weight: 400;
+      font-size: 1.8vmax;
+      cursor: pointer;
+      margin-right: 6vmax;
+      @media screen and (orientation: portrait) {
+        font-size: 2.5vmax;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        margin-right: unset;
+      }
+      br {
+        display: block;
+        content: '';
+        margin-top: -1.5vmax;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        background-color: unset;
+        cursor: pointer;
+      }
+    }
+  }
+  .gallery-title {
+    font-size: 2.8vmax;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 5%;
+    @media screen and (orientation: portrait) {
+      margin-top: 8vmax;
+      font-size: 3.5vmax;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 40%;
+      height: 14px;
+      background-color: $main-yellow;
+      top: 30%;
+      left: 50%;
+      z-index: -1;
+    }
+  }
+  .gallery-content {
+    width: 90%;
+    margin-top: 4vmax;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 1vmax;
+    @media screen and (orientation: portrait) {
+      grid-template-columns: 1fr 1fr;
+    }
+    .gallery-box {
+      height: 25vmax;
+      @include center-img;
+      cursor: pointer;
+      .gallery-box-info {
+        width: 100%;
+        height: 100%;
+        @include flex-center;
+        background-color: rgba(0, 0, 0, 0.6);
+        transform: scale(0);
+        transition: 100ms ease;
+        a {
+          width: 80%;
+          text-align: center;
+          background-color: unset;
+          text-decoration: none;
+          color: $main-yellow;
+          font-size: 1.2vmax;
+        }
+      }
+      &:hover {
+        .gallery-box-info {
+          transform: scale(1);
+        }
+      }
+    }
+    .img-1 {
+      background-image: url(../assets/img/gallery/thumbnails/img-child-1.jpg);
+    }
+    .img-2 {
+      background-image: url(../assets/img/gallery/thumbnails/img-child-2.jpg);
+    }
+    .img-3 {
+      background-image: url(../assets/img/gallery/thumbnails/img-child-3.jpg);
+    }
+    .img-4 {
+      background-image: url(../assets/img/gallery/thumbnails/img-child-4.jpg);
+    }
+  }
+}
+.img-window {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include flex-center;
+  z-index: 800;
+  img {
+    max-height: 80vh;
+    max-width: 80vw;
+    @media screen and (orientation: portrait) {
+      max-width: 75vw;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      max-width: 70vw;
+    }
+  }
+}
+.gallery-next-btn {
+  display: block;
+  width: 3vmax;
+  height: 3vmax;
+  position: fixed;
+  top: 50%;
+  margin-top: -1.5vmax;
+  background-color: unset;
+  z-index: 900;
+  transform: rotate(270deg);
+  background-image: url(../assets/icons/arrow-icon-2.png);
+  @include center-img;
+  cursor: pointer;
+}
+.gallery-prev-btn {
+  display: block;
+  width: 3vmax;
+  height: 3vmax;
+  position: fixed;
+  top: 50%;
+  margin-top: -1.5vmax;
+  z-index: 900;
+  background-color: unset;
+  transform: rotate(90deg);
+  background-image: url(../assets/icons/arrow-icon-2.png);
+  @include center-img;
+  cursor: pointer;
+}
