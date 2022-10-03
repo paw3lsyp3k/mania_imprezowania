@@ -20,6 +20,9 @@ $secondary-gray: #e4e4e4;
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  a {
+    color: black;
+  }
 }
 
 .wrapper1 {
@@ -40,6 +43,9 @@ $secondary-gray: #e4e4e4;
     z-index: 9999;
     top: 0;
     border-bottom: 3px solid $secondary-gray;
+    @media screen and (orientation: portrait) {
+      height: 6vmax;
+    }
     .goBack-section {
       display: flex;
       align-items: center;
@@ -47,7 +53,7 @@ $secondary-gray: #e4e4e4;
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
       @media screen and (orientation: portrait) and (max-width: 450px) {
-        margin-left: 1vmax;
+        margin-left: 0.5vmax;
       }
       .goBack-icon {
         width: 1vmax;
@@ -57,8 +63,8 @@ $secondary-gray: #e4e4e4;
         transform: rotate(90deg);
         cursor: pointer;
         @media screen and (orientation: portrait) {
-          width: 3vmax;
-          height: 3vmax;
+          width: 2vmax;
+          height: 2vmax;
         }
       }
       a {
@@ -68,7 +74,7 @@ $secondary-gray: #e4e4e4;
         text-decoration: none;
         color: black;
         @media screen and (orientation: portrait) {
-          font-size: 2.5vmax;
+          font-size: 2vmax;
         }
         &:visited {
           color: black;
@@ -81,10 +87,11 @@ $secondary-gray: #e4e4e4;
       cursor: pointer;
       margin-right: 6vmax;
       @media screen and (orientation: portrait) {
-        font-size: 2.5vmax;
+        font-size: 2vmax;
+        margin-right: 0.5vmax;
       }
       @media screen and (orientation: portrait) and (max-width: 450px) {
-        margin-right: unset;
+        margin-right: 0.5vmax;
       }
       br {
         display: block;
@@ -107,10 +114,16 @@ $secondary-gray: #e4e4e4;
     align-items: flex-start;
     padding: 10vmax 10vmax 5vmax 8vmax;
     @media screen and (orientation: portrait) {
+      width: 90%;
+      margin: auto;
+      align-items: center;
+      padding: unset;
     }
     @media screen and (orientation: portrait) and (max-width: 450px) {
-      margin-left: unset;
-      padding: 4vmax 0 4vmax 0;
+      width: 95%;
+      margin: auto;
+      align-items: center;
+      padding: unset;
     }
     h2 {
       font-size: 3.4vmax;
@@ -118,10 +131,10 @@ $secondary-gray: #e4e4e4;
       margin: 1vmax 0 5vmax 0;
       @media screen and (orientation: portrait) {
         font-size: 4.5vmax;
-        margin: 3vmax 0 5vmax 0;
+        margin: 12vmax 0 5vmax 0;
+        text-align: center;
       }
       @media screen and (orientation: portrait) and (max-width: 450px) {
-        margin: 8vmax 0 5vmax 3vmax;
       }
       span {
         color: $main-yellow;
@@ -135,6 +148,9 @@ $secondary-gray: #e4e4e4;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
+      @media screen and (orientation: portrait) {
+        align-items: center;
+      }
       h3 {
         font-size: 1.6vmax;
         font-weight: 200;
@@ -145,8 +161,8 @@ $secondary-gray: #e4e4e4;
           margin-left: 3vmax;
         }
         @media screen and (orientation: portrait) and (max-width: 450px) {
-          width: 70%;
-          margin-left: 4vmax;
+          width: 80vmin;
+          margin-left: 0;
         }
         &::before {
           transition: 350ms ease;
@@ -234,3 +250,5 @@ $secondary-gray: #e4e4e4;
     background-image: none;
   }
 }
+
+//hello thele
