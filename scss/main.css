@@ -48,6 +48,11 @@
     border-bottom: 3px solid #f1c40f;
   }
 }
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-1 nav {
+    padding: 0;
+  }
+}
 .wrapper-1 nav ul {
   list-style: none;
 }
@@ -61,6 +66,9 @@
     font-size: 3vmax;
     margin-left: 4vmax;
   }
+}
+.wrapper-1 nav h1 a {
+  color: black;
 }
 .wrapper-1 nav h1 br {
   display: block;
@@ -123,6 +131,7 @@
   transition: 400ms ease;
   position: relative;
   background-color: #f2f2f2;
+  color: black;
 }
 @media screen and (orientation: portrait) {
   .wrapper-1 nav .menu a .menu-item {
@@ -269,6 +278,7 @@
 @media screen and (orientation: portrait) and (max-width: 450px) {
   .wrapper-1 .wrapper-1-content {
     width: 90%;
+    margin-top: 0vmax;
   }
 }
 .wrapper-1 .wrapper-1-content .wrapper-1-title {
@@ -312,6 +322,7 @@
   padding: 1vmax 1.5vmax;
   background-color: #f1c40f;
   cursor: pointer;
+  color: black;
 }
 .wrapper-1 .wrapper-1-content .wrapper-1-button::before {
   transition: 400ms ease;
@@ -530,6 +541,7 @@
   background-color: #f1c40f;
   position: relative;
   font-size: 1.1vmax;
+  color: black;
   cursor: pointer;
 }
 .wrapper-3 .wrapper-3-container .wrapper-3-content .wrapper-3-help .wrapper-3-button::before {
@@ -902,6 +914,7 @@
   font-size: 1.2vmax;
   padding: 0.75vmax 2vmax;
   cursor: pointer;
+  color: black;
 }
 @media screen and (orientation: portrait) {
   .wrapper-6 .wrapper-6-container .wrapper-6-form .wrapper-6-button {

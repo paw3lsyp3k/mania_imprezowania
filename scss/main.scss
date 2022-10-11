@@ -78,6 +78,9 @@ $secondary-gray: #e4e4e4;
       background-color: $main-white;
       border-bottom: 3px solid $main-yellow;
     }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      padding: 0;
+    }
     ul {
       list-style: none;
     }
@@ -88,6 +91,9 @@ $secondary-gray: #e4e4e4;
       @media screen and (orientation: portrait) {
         font-size: 3vmax;
         margin-left: 4vmax;
+      }
+      a {
+        color: black;
       }
       br {
         display: block;
@@ -128,7 +134,6 @@ $secondary-gray: #e4e4e4;
         z-index: 100;
         display: none;
       }
-
       a {
         text-decoration: none;
         color: black;
@@ -144,6 +149,7 @@ $secondary-gray: #e4e4e4;
           transition: 400ms ease;
           position: relative;
           background-color: $main-white;
+          color: black;
           @media screen and (orientation: portrait) {
             font-size: 3vmax;
             margin: 1vmax 0;
@@ -263,6 +269,7 @@ $secondary-gray: #e4e4e4;
     }
     @media screen and (orientation: portrait) and (max-width: 450px) {
       width: 90%;
+      margin-top: 0vmax;
     }
     .wrapper-1-title {
       font-size: 3vmax;
@@ -297,6 +304,7 @@ $secondary-gray: #e4e4e4;
       padding: 1vmax 1.5vmax;
       background-color: $main-yellow;
       cursor: pointer;
+      color: black;
       @include holdEfect;
       @media screen and (orientation: portrait) {
         font-size: 2.5vmax;
@@ -463,6 +471,7 @@ $secondary-gray: #e4e4e4;
           background-color: $main-yellow;
           position: relative;
           font-size: 1.1vmax;
+          color: black;
           cursor: pointer;
           @include holdEfect;
           @media screen and (orientation: portrait) {
@@ -763,6 +772,7 @@ $secondary-gray: #e4e4e4;
         font-size: 1.2vmax;
         padding: 0.75vmax 2vmax;
         cursor: pointer;
+        color: black;
         @media screen and (orientation: portrait) {
           font-size: 2.2vmax;
           padding: 1vmax 3vmax;
