@@ -278,7 +278,7 @@
 @media screen and (orientation: portrait) and (max-width: 450px) {
   .wrapper-1 .wrapper-1-content {
     width: 90%;
-    margin-top: 0vmax;
+    margin-top: 0;
   }
 }
 .wrapper-1 .wrapper-1-content .wrapper-1-title {
@@ -296,7 +296,6 @@
   .wrapper-1 .wrapper-1-content .wrapper-1-title {
     font-size: 5vmax;
     margin-bottom: 2vmax;
-    margin-top: 4vmax;
   }
 }
 .wrapper-1 .wrapper-1-content .wrapper-1-description {

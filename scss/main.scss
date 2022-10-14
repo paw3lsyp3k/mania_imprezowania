@@ -269,7 +269,7 @@ $secondary-gray: #e4e4e4;
     }
     @media screen and (orientation: portrait) and (max-width: 450px) {
       width: 90%;
-      margin-top: 0vmax;
+      margin-top: 0;
     }
     .wrapper-1-title {
       font-size: 3vmax;
@@ -282,7 +282,6 @@ $secondary-gray: #e4e4e4;
       @media screen and (orientation: portrait) and (max-width: 450px) {
         font-size: 5vmax;
         margin-bottom: 2vmax;
-        margin-top: 4vmax;
       }
     }
     .wrapper-1-description {
